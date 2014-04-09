@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <title>Giriş Sayfası</title>
+    <link rel='stylesheet' href='./css/main.css' type='text/css' media='all' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" language="javascript"></script>
+    <script type="text/javascript">
+	    function kontrol(){
+			if ($("#benihatirla").is(":checked")) {
+			     return true;
+			 }
+			 else {
+				alert("Cookie oluşturmak icin beni hatırla seçeneğini seçmelisiniz");
+			    return false;
+			 }
+	    };
+    	$(document).ready(function () {
+    		
+        });
+    </script>
+</head>
+<body>
+<form action="loginkontrol" method="post" onsubmit="return kontrol()">
+<div id="container">
+    <div class="panel">
+        <h2>GİRİŞ YAP</h2>
+
+        <p>Web programlama cookie ödevi, lütfen giriş yap!</p>
+        <hr>
+        <ul class="login">
+            <li class="text"><label for="username">USERNAME :</label><input name="username" id="username" tabindex="0" type="text"></li>
+            <li class="text"><label for="password">PASSWORD :</label><input name="password" id="password" tabindex="1" type="password"></li>
+            <li class="send">
+                <input id=benihatirla type="checkbox"><label for="benihatirla">Beni Hatırla</label>
+                <button id="send">Send</button>
+            </li>
+        </ul>
+    </div>
+</div>
+</form>
+</body>
+
+</html>
